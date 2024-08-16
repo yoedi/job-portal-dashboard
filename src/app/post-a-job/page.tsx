@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { ArrowLeftIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -30,6 +31,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { JOBTYPES } from "@/constants";
 import FieldInput from "@/components/organisms/FieldInput";
 import InputSkills from "@/components/organisms/InputSkill";
+import InputBenefits from "@/components/organisms/InputBenefits";
 import CKEditor from "@/components/organisms/CKEditor";
 
 interface PostJobPageProps {}
@@ -245,6 +247,18 @@ const PostJobPage: FC<PostJobPageProps> = ({}) => {
               editorLoaded={editorLoaded}
             />
           </FieldInput>
+
+          {/* Page 3 */}
+          <FieldInput
+            title="Perks and Benefits"
+            subTitle="Encourage more people to apply by sharing the attractive rewards and benefits you offer your employees"
+          >
+            <InputBenefits form={form} />
+          </FieldInput>
+
+          <div className="flex justify-end">
+            <Button size="lg">Do a review</Button>
+          </div>
         </form>
       </Form>
     </div>
