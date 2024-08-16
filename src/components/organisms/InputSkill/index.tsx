@@ -15,7 +15,7 @@ import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
 interface InputSkillsProps {
-  form: UseFormReturn<z.infer<typeof jobFormSchema>>;
+  form: any;
 }
 
 const InputSkills: FC<InputSkillsProps> = ({ form }) => {
@@ -47,7 +47,7 @@ const InputSkills: FC<InputSkillsProps> = ({ form }) => {
   return (
     <FormField
       control={form.control}
-      name={"requiredSkill"}
+      name={"requiredSkills"}
       render={({ field }) => (
         <FormItem>
           {/* <FormLabel className="block">Add Skills</FormLabel> */}

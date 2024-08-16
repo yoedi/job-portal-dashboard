@@ -5,7 +5,7 @@ import { jobFormSchema } from "@/lib/form-schema";
 import { z } from "zod";
 
 interface CKEditorProps {
-  form: UseFormReturn<z.infer<typeof jobFormSchema>>;
+  form: any;
   name: string;
   editorLoaded?: boolean;
 }
@@ -35,7 +35,7 @@ const CKEditor: FC<CKEditorProps> = ({ form, name, editorLoaded }) => {
           />
           <FormField
             control={form.control}
-            name="name"
+            name={name}
             render={({ field }) => (
               <FormItem>
                 <FormMessage className="mt-3" />

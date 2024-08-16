@@ -24,9 +24,9 @@ export const jobFormSchema = z.object({
   whoYouAre: z
     .string({ required_error: "Who you are is required" })
     .min(10, { message: "Who you are must be at least 10 characters" }),
-  niceToHave: z
-    .string({ required_error: "Nice to have is required" })
-    .min(10, { message: "Nice to have must be at least 10 characters" }),
+  niceToHaves: z
+    .string({ required_error: "Nice to haves is required" })
+    .min(10, { message: "Nice to haves must be at least 10 characters" }),
   benefits: z
     .object({ benefit: z.string(), description: z.string() })
     .array()
