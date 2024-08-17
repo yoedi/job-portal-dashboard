@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeftIcon } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Applicants from "@/components/organisms/Applicants";
+import JobDetail from "@/components/organisms/JobDetail";
 
 interface JobDetailPageProps {}
 
@@ -30,7 +31,7 @@ const JobDetailPage: FC<JobDetailPageProps> = ({}) => {
           <Applicants />
         </TabsContent>
         <TabsContent value="jobDetails">
-          Change your jobDetails here.
+          <JobDetail />
         </TabsContent>
       </Tabs>
     </div>
