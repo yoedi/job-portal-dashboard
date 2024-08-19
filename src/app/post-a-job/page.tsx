@@ -30,7 +30,7 @@ import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { JOBTYPES } from "@/constants";
 import FieldInput from "@/components/organisms/FieldInput";
-import InputSkills from "@/components/organisms/InputSkill";
+import InputSkills from "@/components/organisms/InputSkills";
 import InputBenefits from "@/components/organisms/InputBenefits";
 import CKEditor from "@/components/organisms/CKEditor";
 
@@ -203,7 +203,7 @@ const PostJobPage: FC<PostJobPageProps> = ({}) => {
             title="Required Skill"
             subTitle="Add required skill for the job"
           >
-            <InputSkills form={form} />
+            <InputSkills name="requiredSkills" label="Add Skills" form={form} />
           </FieldInput>
 
           {/* Page 2 */}
