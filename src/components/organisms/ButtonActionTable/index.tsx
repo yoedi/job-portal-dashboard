@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { MoreVertical } from "lucide-react";
 import { useRouter } from "next/navigation";
-import React, { FC } from "react";
+import { FC } from "react";
 
 interface ButtonActionTableProps {
   url: string;

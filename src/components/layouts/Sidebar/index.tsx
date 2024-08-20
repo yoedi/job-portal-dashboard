@@ -1,13 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import React, { FC } from "react";
+import { FC } from "react";
 import {
+  AiOutlineCalendar,
   AiOutlineHome,
+  AiOutlineLogout,
   AiOutlineMessage,
   AiOutlineUser,
-  AiOutlineCalendar,
-  AiOutlineLogout,
 } from "react-icons/ai";
 import { BsBuildings, BsGear } from "react-icons/bs";
 import { HiOutlineClipboardList } from "react-icons/hi";

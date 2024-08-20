@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 import FieldInput from "@/components/organisms/FieldInput";
 import { InstagramIcon, LinkedinIcon } from "lucide-react";

@@ -1,6 +1,7 @@
 "use client";
-import React, { FC } from "react";
+import { FC } from "react";
 
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -9,24 +10,21 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { PlusIcon } from "lucide-react";
-import { socialMediaFormSchema, teamFormSchema } from "@/lib/form-schema";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Separator } from "@radix-ui/react-separator";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormMessage,
   FormLabel,
-  FormDescription,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-
+import { teamFormSchema } from "@/lib/form-schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Separator } from "@radix-ui/react-separator";
+import { PlusIcon } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 interface DialogAddTeamProps {}
 
 const DialogAddTeam: FC<DialogAddTeamProps> = ({}) => {

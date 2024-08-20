@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from "react";
 import { Separator } from "@/components/ui/separator";
+import { FC, ReactNode } from "react";
 
 interface FieldInputProps {
   children: ReactNode;

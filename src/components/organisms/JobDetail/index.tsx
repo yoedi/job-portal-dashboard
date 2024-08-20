@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@radix-ui/react-separator";
-import { Badge } from "@/components/ui/badge";
 import { PartyPopperIcon } from "lucide-react";
+import { FC } from "react";
 
 interface JobDetailProps {}
 

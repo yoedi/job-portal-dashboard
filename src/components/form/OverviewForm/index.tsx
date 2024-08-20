@@ -1,46 +1,43 @@
 "use client";
 
 import TitleForm from "@/components/atoms/TitleForm";
-import { overviewFormSchema } from "@/lib/form-schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import React, { FC, useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Separator } from "@radix-ui/react-separator";
+import CKEditor from "@/components/organisms/CKEditor";
+import CustomUpload from "@/components/organisms/CustomUpload";
+import FieldInput from "@/components/organisms/FieldInput";
+import InputSkills from "@/components/organisms/InputSkills";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormMessage,
   FormLabel,
-  FormDescription,
+  FormMessage,
 } from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { CalendarIcon } from "lucide-react";
-import { Calendar } from "@/components/ui/calendar";
-import { Button } from "@/components/ui/button";
-import { format } from "date-fns";
-import FieldInput from "@/components/organisms/FieldInput";
-import CustomUpload from "@/components/organisms/CustomUpload";
-import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { EMPLOYEE_OPTIONS, LOCATION_OPTIONS, optionType } from "@/constants";
+import { overviewFormSchema } from "@/lib/form-schema";
 import { cn } from "@/lib/utils";
-import InputSkills from "@/components/organisms/InputSkills";
-import CKEditor from "@/components/organisms/CKEditor";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Separator } from "@radix-ui/react-separator";
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { FC, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 interface OverviewFormProps {}
 

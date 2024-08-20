@@ -1,8 +1,5 @@
-import { FC, useEffect, useRef } from "react";
 import { FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { UseFormReturn } from "react-hook-form";
-import { jobFormSchema } from "@/lib/form-schema";
-import { z } from "zod";
+import { FC, useEffect, useRef } from "react";
 
 interface CKEditorProps {
   form: any;
