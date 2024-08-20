@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import ButtonActionTable from "@/components/organisms/ButtonActionTable";
+import { Badge } from "@/components/ui/badge";
 import {
   Table,
   TableBody,
@@ -9,8 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { JOB_LISTING_COLUMNS, JOB_LISTING_DATA } from "@/constants";
-import { Badge } from "@/components/ui/badge";
-import ButtonActionTable from "@/components/organisms/ButtonActionTable";
+import { FC } from "react";
 
 interface JobListingsPageProps {}
 

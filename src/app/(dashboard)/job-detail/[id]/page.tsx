@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import Link from "next/link";
-import { ArrowLeftIcon } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Applicants from "@/components/organisms/Applicants";
 import JobDetail from "@/components/organisms/JobDetail";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ArrowLeftIcon } from "lucide-react";
+import Link from "next/link";
+import { FC } from "react";
 
 interface JobDetailPageProps {}
 

@@ -1,38 +1,36 @@
 "use client";
 
-import { jobFormSchema } from "@/lib/form-schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import React, { FC, useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { ArrowLeftIcon } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import CKEditor from "@/components/organisms/CKEditor";
+import FieldInput from "@/components/organisms/FieldInput";
+import InputBenefits from "@/components/organisms/InputBenefits";
+import InputSkills from "@/components/organisms/InputSkills";
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
-  FormMessage,
-  FormDescription,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Separator } from "@/components/ui/separator";
 import { JOBTYPES } from "@/constants";
-import FieldInput from "@/components/organisms/FieldInput";
-import InputSkills from "@/components/organisms/InputSkills";
-import InputBenefits from "@/components/organisms/InputBenefits";
-import CKEditor from "@/components/organisms/CKEditor";
+import { jobFormSchema } from "@/lib/form-schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ArrowLeftIcon } from "lucide-react";
+import { FC, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 interface PostJobPageProps {}
 

@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Overview from "@/components/form/OverviewForm";
 import SocialMediaForm from "@/components/form/SocialMediaForm";
 import TeamForm from "@/components/form/TeamForm";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FC } from "react";
 
 interface SettingsPageProps {}
 
