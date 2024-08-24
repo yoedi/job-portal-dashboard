@@ -85,7 +85,7 @@ model Job {
     companyId String?
     CategoryJob CategoryJob? @relation(fields: [categoryId], references: [id])
     Company Company? @relation(fields: [companyId], references: [id])
-    Applicants Applicants[]
+    Applicant Applicant[]
 }
 
 model User {
@@ -93,10 +93,10 @@ model User {
     name String
     password String
     email String @unique
-    Applicants Applicants[]
+    Applicant Applicant[]
 }
 
-model Applicants {
+model Applicant {
     id String @id @default(cuid())
     userId String?
     jobId String?
