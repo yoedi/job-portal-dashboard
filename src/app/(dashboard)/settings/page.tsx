@@ -14,7 +14,7 @@ async function getDetailCompany() {
 
   const company = await prisma.company.findFirst({
     where: { id: session?.user.id },
-    include: { CompanyOverview: true },
+    include: { CompanyOverview: true, CompanySocialMedia: true },
   });
 
   return company;
@@ -36,7 +36,7 @@ const SettingsPage: FC<SettingsPageProps> = async ({}) => {
           <Overview detail={company?.CompanyOverview[0]} />
         </TabsContent>
         <TabsContent value="socialLinks">
-          <SocialMediaForm />
+          <SocialMediaForm detail={company?.CompanySocialMedia[0]} />
         </TabsContent>
         <TabsContent value="teams">
           <TeamForm />
