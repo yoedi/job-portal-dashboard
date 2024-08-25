@@ -25,15 +25,43 @@ import { Separator } from "@radix-ui/react-separator";
 import { PlusIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useToast } from "@/components/ui/use-toast";
+import { CompanyTeam } from "@prisma/client";
+
 interface DialogAddTeamProps {}
 
 const DialogAddTeam: FC<DialogAddTeamProps> = ({}) => {
+  const { data: session } = useSession();
+  const { toast } = useToast();
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof teamFormSchema>>({
     resolver: zodResolver(teamFormSchema),
   });
 
-  const onSubmit = (val: z.infer<typeof teamFormSchema>) => {
-    console.log(val);
+  const onSubmit = async (val: z.infer<typeof teamFormSchema>) => {
+    try {
+      const body = {
+        ...val,
+        companyId: session?.user.id,
+      };
+
+      await fetch("/api/company/teams", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      toast({ title: "Success", description: "Add member success" });
+
+      await router.refresh();
+    } catch (error) {
+      toast({ title: "Error", description: "Please try again" });
+
+      console.log(error);
+    }
   };
 
   return (
