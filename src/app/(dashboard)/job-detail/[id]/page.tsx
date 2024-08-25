@@ -49,7 +49,7 @@ const JobDetailPage: FC<JobDetailPageProps> = async ({ params }) => {
           <Applicants applicants={job?.Applicant} />
         </TabsContent>
         <TabsContent value="jobDetails">
-          <JobDetail />
+          <JobDetail detail={job} />
         </TabsContent>
       </Tabs>
     </div>
