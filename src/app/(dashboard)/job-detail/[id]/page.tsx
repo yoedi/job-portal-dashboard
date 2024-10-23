@@ -7,9 +7,12 @@ import { FC } from "react";
 import prisma from "../../../../../lib/prisma";
 
 type param = { id: string };
+
 interface JobDetailPageProps {
   params: param;
 }
+
+export const revalidate = 0;
 
 async function getDatailJob(id: string) {
   const job = await prisma.job.findFirst({
